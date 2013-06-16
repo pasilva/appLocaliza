@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPS</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.1.css"/>
+		<script type="text/javascript" src="jquery-1.6.3.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.3.1.js"></script>
+		<script type="text/javascript" src="cordova-2.7.0.js"></script>
+		<script type="text/javascript" src="GeoLocation.js"></script>
+</head>
+
+<body onLoad="init();" >
+	<div data-role="page" id="main" >
+		<div data-role="header" >
+			<h1>AppLocaliza</h1>
+		</div>
+	
+	<div data-role="content">
+		<h2 align="center">Onde estou?</h2>
+		<a data-role="button" href="#page2" data-rel="page" data-theme="b" datatransition="flip" >Localize-me</a> 
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4></h4>
+	</div>
+	</div>
+	
+	<div data-role="page" id="page2" >
+		<div data-role="header" >
+			<h1>AppLocaliza</h1>
+		</div>
+		
+	<div data-role="content" >
+		<div class="ui-grid">
+			<div class="ui-block" style = "height: 40px" align="center"><div class="ui-bar ui-bar-b">Minhas Coordenadas</div></div>
+			<div data-role="ﬁeldcontain" class="ui-bar ui-bar-d">
+			 <table border="0" >
+				 <tr> <td>Latitude:</td> <td id="latitude" ></td></tr>
+				 <tr> <td>Longitude:</td> <td id="longitude"></td></tr>
+				 <tr> <td>Altitude:</td> <td id="altitude"></td></tr>
+				 <tr> <td>Timestamp:</td> <td id="timestamp"></td></tr>
+			</table>
+			</div>
+			<div align="right">
+				<a href="#main" data-role="button" data-rel="page" data-theme="e" >Voltar</a>
+			</div>
+		</div>
+			<div data-role="footer" data-position="fixed" ><h4></h4></div>
+	</div>
+</body>
+</html>
